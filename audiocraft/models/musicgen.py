@@ -48,8 +48,7 @@ class MusicGen(BaseGenModel):
         max_duration (float, optional): maximum duration the model can produce,
             otherwise, inferred from the training params.
     """
-    def __init__(self, name: str, compression_model: CompressionModel, lm: LMModel,
-                 max_duration: tp.Optional[float] = None):
+    def __init__(self, name: str, compression_model: CompressionModel, lm: LMModel,max_duration: tp.Optional[float] = None):
         super().__init__(name, compression_model, lm, max_duration)
         self.set_generation_params(duration=15)  # default duration
 
